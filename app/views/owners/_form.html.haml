@@ -1,0 +1,26 @@
+= form_with(model: owner) do |form|
+  - if owner.errors.any?
+    %div{:style => "color: red"}
+      %h2
+        = pluralize(owner.errors.count, "error")
+        prohibited this owner from being saved:
+      %ul
+        - owner.errors.each do |error|
+          %li= error.full_message
+  %div
+    = form.label :first_name, style: "display: block"
+    = form.text_field :first_name
+  %div
+    = form.label :last_name, style: "display: block"
+    = form.text_field :last_name
+  %div
+    = form.label :email, style: "display: block"
+    = form.text_field :email
+  %div
+    = form.label :number_id, style: "display: block"
+    = form.number_field :number_id
+  %div
+    = form.label :level, style: "display: block"
+    = form.number_field :level
+  %div
+    = form.submit

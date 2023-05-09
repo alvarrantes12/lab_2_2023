@@ -1,2 +1,4 @@
 es:
-  hello: "Hello world"
+  application:
+    email_not_valid: Correo inválido
+  activerecords:
