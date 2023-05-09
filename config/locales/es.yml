@@ -1,2 +1,58 @@
 es:
-  hello: "Hello world"
+  application:
+    list_of: Lista de %{model}
+    new_model: Nuevo %{model}
+    title: Lab 2 David y Fabricio
+    btnTitle: Ver dueños
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    back: Atras
+    delete: Eliminar
+    create: Crear
+    cruds_available: tema disponible
+    error: Error !!
+    created: Creado Exitosamente
+    edited: Actualizado Exitosamente
+    destroyed: Borrado Exitosamente
+    select: Seleccione
+  activerecord:
+    attributes:
+      owner:
+        first_name: Nombre
+        last_name: Apellido
+        email: Correo Electronico
+        owner_id: Identificador
+        types_level:
+          gold: Oro
+          silver: Plata
+          bronze: Bronce
+        level: Nivel
+    modules:
+      owner:
+        new: Nuevo Dueño
+        edit: Editando Dueño
+        one: Dueño
+        other: Dueños
+    errors:
+      models:
+        owner:
+          attributes:
+            first_name:
+              blank: vacío
+              too_long: debe tener como máximo %{count} caracteres
+            last_name: 
+              blank: vacío
+              too_long: debe tener como máximo %{count} caracteres
+            email:
+              blank: vacío
+              invalid: debe de ser un correo valido
+            owner_id:
+              blank: vacío
+              taken: debe de ser diferente
+              too_short: debe tener como minimo %{count} caracteres
+              too_long: debe tener como máximo %{count} caracteres
+            level:
+              blank: vacío
+
+
