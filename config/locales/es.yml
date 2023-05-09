@@ -1,2 +1,31 @@
 es:
-  hello: "Hello world"
+  application:
+    list_of: Lista del
+    create: Crear
+    show: Mostrar
+    edit: Editar
+    delete: Eliminar
+    created: Creado exitosamente
+    updated: Editado exitosamente
+    destroyed: Eliminado exitosamente
+    cruds_avaibles: CRUDs disponibles
+    can_not_be_saved: No se pudo guardar
+    back: Atrás
+    save: Guardar
+    select: Seleccionar
+  activerecord:
+    modules:
+      owner:
+        one: Dueño
+        other: Dueños
+    attributes:
+      owner:
+        first_name: Nombre
+        last_name: Apellido
+        email: Correo electrónico
+        id_number: Número de identificación
+        level: Nivel
+        levels:
+          bronze: Bronce
+          silver: Plata
+          gold: Oro
