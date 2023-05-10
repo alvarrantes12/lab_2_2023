@@ -1,5 +1,6 @@
 class Owner < ApplicationRecord
-
+    has_many :pets
+    
     validates :first_name, presence: true, length: { minimum: 2, maximum: 10 }
     validates :last_name, presence: true, length: { minimum: 2, maximum: 15 }
     validates :email, presence: true, format: { with: /\A[\w+-.]+@[a-z\d-]+(.[a-z]+)*.[a-z]+\z/i }

@@ -53,5 +53,9 @@ es:
               too_long: debe de ser de máximo 8 números
             level: 
               blank: es un campo requerido
+        pet:
+          attributes:
+            pedrigree:
+              blank: es un campo requerido
             
             
