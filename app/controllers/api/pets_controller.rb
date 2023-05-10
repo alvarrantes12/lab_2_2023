@@ -17,7 +17,7 @@ module Api
 
   def create
     @pet = Pet.new(pet_params)
-
+    
     if @pet.save
       render 'api/pets/show', status: :created
     else
