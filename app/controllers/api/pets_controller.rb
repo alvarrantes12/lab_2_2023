@@ -1,4 +1,4 @@
-Api
+module Api
   class PetsController < ApplicationController
     skip_before_action :verify_authenticity_token
     before_action :set_pet, only: %i[ show edit update destroy ]
@@ -18,17 +18,17 @@ Api
     def create
       @pet = Pet.new(pet_params)
       if @pet.save
-        format.json render 'api/pets/show', status: :created
+        render 'api/pets/show', status: :created
       else
-        format.json render json: @pet.errors, status: :unprocessable_entity
+        render json: @pet.errors, status: :unprocessable_entity
       end
     end
 
     def update
       if @pet.update(pet_params)
-        format.json render 'api/pets/show', status: :ok
+        render 'api/pets/show', status: :ok
       else
-        format.json render json: @pet.errors, status: :unprocessable_entity
+        render json: @pet.errors, status: :unprocessable_entity
       end
     end
 

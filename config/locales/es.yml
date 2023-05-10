@@ -51,6 +51,7 @@ es:
               blank: es un campo requerido
               too_short: debe de ser de al menos 5 números
               too_long: debe de ser de máximo 8 números
+              taken: ya está en uso
             level: 
               blank: es un campo requerido
         pet:
