@@ -49,22 +49,22 @@ RSpec.describe Owner, type: :model do
   end
 
   it "is not valid with a first_name with more than 10 letters" do
-    subject.first_name = "abcdefghijklmnopqrstu"
+    subject.first_name = "abcdefghijk"
     expect(subject).to_not be_valid
   end
 
   it "is not valid with a last_name with more than 15 letters" do
-    subject.last_name = "abcdefghijklmnopqrstu"
+    subject.last_name = "abcdefghijklmnop"
     expect(subject).to_not be_valid
   end
 
-  # it "is not valid with a number_id with less than 5 letters" do
-  #   subject.number_id = "a"
-  #   expect(subject).to_not be_valid
-  # end
+  it "is not valid with a number_id with less than 5 numbers" do
+    subject.number_id = 1234
+    expect(subject).to_not be_valid
+  end
 
-  # it "is not valid with a number_id with more than 8 letters" do
-  #   subject.number_id = "abcdefghijklmnopqrstu"
-  #   expect(subject).to_not be_valid
-  # end
+  it "is not valid with a number_id with more than 8 numbers" do
+    subject.number_id = 123456789
+    expect(subject).to_not be_valid
+  end
 end

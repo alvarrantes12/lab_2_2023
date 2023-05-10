@@ -1,26 +1,41 @@
-= form_with(model: owner) do |form|
-  - if owner.errors.any?
-    %div{:style => "color: red"}
-      %h2
-        = pluralize(owner.errors.count, "error")
-        prohibited this owner from being saved:
-      %ul
-        - owner.errors.each do |error|
-          %li= error.full_message
-  %div
-    = form.label :first_name, style: "display: block"
-    = form.text_field :first_name
-  %div
-    = form.label :last_name, style: "display: block"
-    = form.text_field :last_name
-  %div
-    = form.label :email, style: "display: block"
-    = form.text_field :email
-  %div
-    = form.label :number_id, style: "display: block"
-    = form.number_field :number_id
-  %div
-    = form.label :level, style: "display: block"
-    = form.number_field :level
-  %div
-    = form.submit
+= form_for @owner, validate: true do |f|
+  -if @owner.errors.any?
+    .card.mx-4 
+      .card-body
+        %div{style: 'color: red'}
+          %h2
+            = t('application.can_not_be_saved')
+          %ul
+            -   @owner.errors.each do |error|
+              %li= error.full_message
+
+  .form-group.mx-4
+    = f.label :first_name, class: "form-label required"
+    .div.w-25 
+      = f.text_field :first_name, autofocus: true, class: "form-control"
+
+  .form-group.mx-4
+    = f.label :last_name, class: "form-label required"
+    .div.w-25 
+      = f.text_field :last_name, autofocus: true, class: "form-control"
+
+  .form-group.mx-4
+    = f.label :email, class: "form-label required"
+    .div.w-25 
+      = f.text_area :email, autofocus: true, class: "form-control"
+
+  .form-group.mx-4
+    = f.label :number_id, class: "form-label required"
+    .div.w-25 
+      = f.text_field :number_id, autofocus: true, class: "form-control"
+
+  .form-group.mx-4
+    = f.label :level, class: "form-label required"
+    .div.w-25 
+      = f.select(:level, options_for_select(levels, @owner.level), {prompt: t('application.select')}, class: "form-control")
+
+  .row.mt-4 
+    .offset-3.col-3
+      = link_to t('application.back'), owners_path, class: "btn btn-secondary btn-block"
+    .col-3 
+      = button_tag t('application.save'), class: "btn btn-outline-success btn-block"

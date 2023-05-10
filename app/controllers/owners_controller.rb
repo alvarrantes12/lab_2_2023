@@ -25,7 +25,7 @@ class OwnersController < ApplicationController
 
     respond_to do |format|
       if @owner.save
-        format.html { redirect_to owner_url(@owner), notice: "Owner was successfully created." }
+        format.html { redirect_to owner_url(@owner), notice: t('application.created_model', model: t('activerecord.modules.owner.one')) }
         format.json { render :show, status: :created, location: @owner }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class OwnersController < ApplicationController
   def update
     respond_to do |format|
       if @owner.update(owner_params)
-        format.html { redirect_to owner_url(@owner), notice: "Owner was successfully updated." }
+        format.html { redirect_to owner_url(@owner), notice: t('application.updated_model', model: t('activerecord.modules.owner.one')) }
         format.json { render :show, status: :ok, location: @owner }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class OwnersController < ApplicationController
     @owner.destroy
 
     respond_to do |format|
-      format.html { redirect_to owners_url, notice: "Owner was successfully destroyed." }
+      format.html { redirect_to owners_url, notice: t('application.destroyed_model', model: t('activerecord.modules.owner.one')) }
       format.json { head :no_content }
     end
   end

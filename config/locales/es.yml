@@ -1,4 +1,57 @@
 es:
   application:
-    email_not_valid: Correo inválido
-  activerecords:
+    list_of: Lista de %{model}
+    show_model: Mostrar %{model}
+    new_model: Nuevo %{model}
+    edit_model: Editar %{model}
+    created_model: Se creó %{model}
+    updated_model: Se editó %{model}
+    destroyed_model: Se eliminó %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    create: Crear
+    can_not_be_saved: No se pudo guardar
+    select: Seleccione
+    back: Atrás
+    owners_available: Propietarios disponibles
+  activerecord:
+    attributes:
+      owner:
+        first_name: Nombre
+        last_name: Apellido
+        email: Correo
+        number_id: Numero de identificación
+        level: Nivel
+        levels:
+          bronze: Bronce
+          silver: Plata
+          gold: Oro
+    modules:
+      owner: 
+        one: Propietario
+        other: Propietarios
+    errors:
+      models:
+        owner:
+          attributes:
+            first_name:
+              blank: es un campo requerido
+              too_short: debe ser de al menos 2 letras
+              too_long: debe ser de maximo 10 letras
+            last_name:
+              blank: es un campo requerido
+              too_short: debe ser de al menos 2 letras
+              too_long: debe ser de maximo 15 letras
+            email:
+              blank: es un campo requerido
+              invalid: tiene formato inválido
+            number_id:
+              blank: es un campo requerido
+              too_short: debe de ser de al menos 5 números
+              too_long: debe de ser de máximo 8 números
+            level: 
+              blank: es un campo requerido
+            
+            
