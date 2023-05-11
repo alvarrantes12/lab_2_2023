@@ -1,2 +1,84 @@
 es:
-  hello: "Hello world"
+  application:
+    list_of: Lista del %{model}
+    new_model: Nuevo %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    create: Crear
+    back: Atrás
+    cruds_available: Mostrar y registrar a los dueños o dueñas de las mascotas
+    can_not_be_save: No se pudo guardar
+    created: Creado exitosamente
+    destroyed: Eliminado de forma exitosa
+    updated: Editado de forma exitosa
+    select: Seleccione
+  activerecord:
+    attributes:
+      owner:
+          email: Correo
+          identity: Identificación
+          level: Nivel
+          first_name: Nombre
+          last_name: Apellido
+          levels:
+            gold: Oro
+            silver: Plata
+            bronze: Bronce
+      labels:
+        email: Correo
+        identity: Identificación
+        level: Nivel
+        first_name: Nombre
+        last_name: Apellido
+      
+    modules:
+      register: Mostrar e ingresar dueño
+      owner:
+        otherone: dueño
+       
+      pets:
+        pet: mascotas
+      pet: 
+        name: Nombre
+        breed: Raza
+        pedigree: pedigrí
+    errors:
+     models:
+        owner:
+          attributes:
+            email:
+              invalid: "no es válido"
+              blank: "en blanco favor ingresar un correo"
+            first_name: 
+              blank: "en blanco favor ingresar un nombre"
+              too_short: muy corto debe ser mayor a 3 letras
+              too_long: demasiado largo
+            last_name:
+              blank: "en blanco favor ingresar un apellido"
+              too_short: muy corto debe ser mayor a 3 letras
+              too_long: demasiado largo
+            identity: 
+              blank: "en blanco favor ingresar una identidad"
+            level:
+              blank: "en blanco favor ingresar un nivel"
+        pet:
+          attributes:
+            owner:
+              required: ingrese un id
+            breed:
+              blank: "en blanco favor ingresar una raza"
+              too_short: muy corto debe ser mayor a 3 letras
+              too_long: demasiado largo
+            name:
+              blank: "en blanco favor ingresar un nombre"
+              too_short: muy corto debe ser mayor a 3 letras
+              too_long: demasiado largo
+            pedigree:
+              blank: "en blanco favor ingresar un pedigree"
+
+        
+
+    
+  
