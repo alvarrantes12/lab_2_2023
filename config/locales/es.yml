@@ -1,6 +1,7 @@
 es:
   application:
-    list_of: Lista del
+    list_of: Lista de %{model}
+    new_model: Nuevo %{model}
     create: Crear
     show: Mostrar
     edit: Editar
@@ -14,10 +15,6 @@ es:
     save: Guardar
     select: Seleccionar
   activerecord:
-    modules:
-      owner:
-        one: Dueño
-        other: Dueños
     attributes:
       owner:
         first_name: Nombre
@@ -29,3 +26,23 @@ es:
           bronze: Bronce
           silver: Plata
           gold: Oro
+    modules:
+      owner:
+        one: Dueño
+        other: Dueños
+    errors:
+     models:
+      owner:
+        attributes:
+          first_name:
+            blank: no tiene contenido
+          last_name:
+            blank: no tiene contenido
+          email:
+            blank: no tiene contenido
+            invalid: es invalido
+          id_number:
+            blank: no tiene contenido
+            too_short: es muy corto
+
+

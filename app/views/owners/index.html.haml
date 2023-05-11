@@ -6,25 +6,26 @@
     .float-end.pb-4
       = link_to t('application.create'), new_owner_path, class: "btn btn-primary"
 
-  %table.table.table-striped
-    %thead
+%table.table.table-striped
+  %thread
+    %tr
+      %th= t('activerecord.attributes.owner.first_name')
+      %th= t('activerecord.attributes.owner.last_name')
+      %th= t('activerecord.attributes.owner.email')
+      %th= t('activerecord.attributes.owner.id_number')
+      %th= t('activerecord.attributes.owner.level')
+      %th
+      %th
+      %th
+
+  %tbody
+    -@owners.each do |owner|
       %tr
-        %th= t('activerecord.attributes.owner.first_name')
-        %th= t('activerecord.attributes.owner.last_name')
-        %th= t('activerecord.attributes.owner.email')
-        %th= t('activerecord.attributes.owner.id_number')
-        %th= t('activerecord.attributes.owner.level')
-        %th
-        %th
-        %th
-    %tbody
-      -@owners.each do |owner|
-        %tr
-          %td= owner.first_name
-          %td= owner.last_name
-          %td= owner.email
-          %td= owner.id_number
-          %td= owner.level
-          %td= link_to t('application.show'), owner, class: "btn btn-info"
-          %td= link_to t('application.edit'), edit_owner_path(owner), class: "btn btn-success"
-          %td= button_to t('application.delete'), owner, method: :delete, class: "btn btn-danger"
+        %td= owner.first_name
+        %td= owner.last_name
+        %td= owner.email
+        %td= owner.id_number
+        %td= owner.level
+        %td= link_to t('application.show'), owner, class: "btn btn-info"
+        %td= link_to t('application.edit'), edit_owner_path(owner), class: "btn btn-success"
+        %td= button_to t('application.delete'), owner, method: :delete, class: "btn btn-danger"

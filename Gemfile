@@ -9,9 +9,12 @@ gem 'bootstrap'
 gem "bootsnap", require: false
 gem 'font-awesome-sass', '~> 6.4.0'
 gem 'haml'
+gem 'httparty'
+gem 'pry'
 gem "importmap-rails"
 gem "jbuilder"
 gem 'jquery-rails'
+gem 'rack-cors'
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem 'sass-rails'
