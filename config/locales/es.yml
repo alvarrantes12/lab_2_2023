@@ -44,5 +44,17 @@ es:
           id_number:
             blank: no tiene contenido
             too_short: es muy corto
+      pet:
+        attributes:
+          pedigree:
+            blank: no tiene contenido
+          name:
+            blank: no tiene contenido
+          race:
+            blank: no tiene contenido
+          owner:
+            blank: no tiene contenido
+
+
 
 

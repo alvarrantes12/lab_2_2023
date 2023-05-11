@@ -36,7 +36,6 @@ module Api
     def destroy
       @pet.destroy
       render 'api/pets/show', status: :ok
-      end
     end
 
     private
@@ -46,7 +45,7 @@ module Api
     end
 
     def pet_params
-      params.require(:pet).permit(:name, :race, :pedigree)
+      params.require(:pet).permit(:name, :race, :pedigree, :owner_id)
     end
   end
 end
