@@ -5,7 +5,7 @@ RSpec.describe Pet, type: :model do
   subject{
     described_class.new(name: "Test",
                         race: "Test L",
-                        pedigree: true,
+                        pedigree: false,
                         owner: owner
                         )
   }
