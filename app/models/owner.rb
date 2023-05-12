@@ -1,4 +1,5 @@
 class Owner < ApplicationRecord
+    has_many :pets
     validates :first_name, presence: true, length: { maximum: 10 }
     validates :last_name, presence: true, length: { maximum: 15 }
     validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }

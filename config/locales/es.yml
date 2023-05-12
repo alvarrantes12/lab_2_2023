@@ -2,11 +2,13 @@ es:
   application:
     list_of: Lista del %{model}
     new_model: Nuevo %{model}
+    edit_model: Editar %{model}
     show: Mostrar
     edit: Editar
     save: Guardar
     delete: Eliminar
     create: Crear
+    back: Atrás
     can_not_be_saved: No se pudo guardar
   activerecord:
     attributes:
@@ -32,7 +34,8 @@ es:
               blank: es un campo requerido
               too_short: es muy corto
               too_long: es muy largo
-            email: 
+            email:
+              invalid: no es válido 
               blank: es un campo requerido
               too_short: es muy corto
               too_long: es muy largo
