@@ -1,2 +1,61 @@
 es:
-  hello: "Hello world"
+  application:
+    list_of: Lista de %{model}
+    show_model: Mostrar %{model}
+    new_model: Nuevo %{model}
+    edit_model: Editar %{model}
+    created_model: Se creó %{model}
+    updated_model: Se editó %{model}
+    destroyed_model: Se eliminó %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    create: Crear
+    can_not_be_saved: No se pudo guardar
+    select: Seleccione
+    back: Atrás
+    owners_available: Propietarios disponibles
+  activerecord:
+    attributes:
+      owner:
+        first_name: Nombre
+        last_name: Apellido
+        email: Correo
+        identification: Numero de identificación
+        level: Nivel
+        levels:
+          bronze: Bronce
+          silver: Plata
+          gold: Oro
+    modules:
+      owner:
+        one: Propietario
+        other: Propietarios
+    errors:
+      models:
+        owner:
+          attributes:
+            first_name:
+              blank: El campo es requerido
+              too_short: El campo debe ser de al menos 2 letras
+              too_long: El campo debe ser de maximo 10 letras
+            last_name:
+              blank: El campo es requerido
+              too_short: El campo debe ser de al menos 2 letras
+              too_long: El campo debe ser de maximo 15 letras
+            email:
+              blank: El campo es requerido
+              invalid: El formato es invalido
+            number_id:
+              blank: El campo es requerido
+              too_short: El campo debe de ser de al menos 5 números
+              too_long: El campo debe de ser de máximo 8 números
+              taken: Este id ya esta un uso
+            level:
+              blank: El campo es requerido
+        pet:
+          attributes:
+            pedrigree:
+              blank: El campo es requerido
+

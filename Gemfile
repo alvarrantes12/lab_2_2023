@@ -14,6 +14,8 @@ gem "jbuilder"
 gem 'jquery-rails'
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
+gem "rack-cors"
+gem "haml-rails"
 gem 'sass-rails'
 gem "sprockets-rails"
 gem "stimulus-rails"
