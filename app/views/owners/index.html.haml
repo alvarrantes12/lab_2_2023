@@ -25,7 +25,7 @@
         %td= owner.last_name
         %td= owner.email
         %td= owner.id_number
-        %td= owner.level
+        %td= t("activerecord.attributes.owner.levels.#{owner.level}")
         %td= link_to t('application.show'), owner, class: "btn btn-info"
         %td= link_to t('application.edit'), edit_owner_path(owner), class: "btn btn-success"
         %td= button_to t('application.delete'), owner, method: :delete, class: "btn btn-danger"

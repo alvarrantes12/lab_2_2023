@@ -7,7 +7,7 @@ json.pet do
         json.first_name @pet.owner.first_name
         json.last_name @pet.owner.last_name
         json.email @pet.owner.email  
-        json.id_owner @pet.owner.id_owner
+        json.id_number @pet.owner.id_number
         json.level @pet.owner.level    
     end
 end

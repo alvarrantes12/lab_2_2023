@@ -31,18 +31,33 @@ es:
         one: Dueño
         other: Dueños
     errors:
-     models:
-      owner:
-        attributes:
-          first_name:
-            blank: no tiene contenido
-          last_name:
-            blank: no tiene contenido
-          email:
-            blank: no tiene contenido
-            invalid: es invalido
-          id_number:
-            blank: no tiene contenido
-            too_short: es muy corto
-
-
+      models:
+        owner:
+          attributes:
+            first_name:
+              blank: no tiene contenido
+              too_long: es muy largo
+            last_name:
+              blank: no tiene contenido
+              too_long: es muy largo
+            email:
+              blank: no tiene contenido
+              invalid: es invalido
+            id_number:
+              blank: no tiene contenido
+              too_short: es muy corto
+              too_long: es muy largo
+            level:
+              blank: no tiene contenido
+        pet:
+          attributes:
+            name:
+              blank: no tiene contenido
+              too_long: es muy largo
+            race:
+              blank: no tiene contenido
+              too_long: es muy largo
+            pedigree:
+              blank: no tiene contenido
+            owner:
+              required: no especifica un dueño
