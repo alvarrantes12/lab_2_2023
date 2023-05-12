@@ -16,6 +16,7 @@ class OwnersController < ApplicationController
   def create
     @owner = Owner.new(owner_params)
     if @owner.save
+      QuestionsService.new.build_questions
       redirect_to owner_url(@owner), notice: "Owner was successfully created."
     else
       render :new, status: :unprocessable_entity
