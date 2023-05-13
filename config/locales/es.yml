@@ -1,12 +1,12 @@
 es:
   application:
     list_of: Lista de %{model}
-    show_model: Mostrar %{model}
-    new_model: Nuevo %{model}
-    edit_model: Editar %{model}
-    created_model: Se creó %{model}
-    updated_model: Se editó %{model}
-    destroyed_model: Se eliminó %{model}
+    show: Mostrar %{model}
+    new: Nuevo %{model}
+    edit: Editar %{model}
+    created: Se creó %{model}
+    updated: Se editó %{model}
+    destroyed: Se eliminó %{model}
     show: Mostrar
     edit: Editar
     save: Guardar
@@ -22,7 +22,7 @@ es:
         first_name: Nombre
         last_name: Apellido
         email: Correo
-        number_id: Numero de identificación
+        id: Numero de identificación
         level: Nivel
         levels:
           bronze: Bronce
