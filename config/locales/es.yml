@@ -1,2 +1,59 @@
 es:
-  hello: "Hello world"
+  application:
+    list_of: Lista de %{model}
+    new_model: Nuevo %{model}
+    back_to: Volver a %{model}
+    editing: Editando %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    create: Crear
+    cruds_available: tema disponible
+    back: Atras
+    can_not_be_saved: no puede ser guardado
+    select: Seleccionar
+
+  messages:
+    success:  
+      successfully_created: creado exitosamente
+      successfully_updated: actualizado con éxito
+      successfully_destroy: eliminado con éxito
+
+  activerecord:
+    attributes:
+      owner:
+        first_name: Nombre
+        last_name: Apellido
+        email: Correo
+        identification_numer: Número de identificación 
+        level_type: Nivel
+        level_Types:
+          gold: Oro
+          silver: Plata
+          bronze: Bronce
+
+    modules:
+      owner:
+        the: El
+        one: Dueño
+        other: Dueños
+
+    errors:
+      models:
+        owner:
+          attributes:
+            first_name:
+              blank: es requerido
+            last_name:
+              blank: es requerido
+            email:
+              blank: es requerido
+              invalid: es invalido
+            identification_numer:
+              blank: es requerido
+              too_short: debe de tener un mínimo de 5 números
+              too_long: debe de tener un máximo de 8 números
+              taken: ya esta registrado
+
+      

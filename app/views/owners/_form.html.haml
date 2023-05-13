@@ -1,0 +1,41 @@
+= form_for @owner do |f|
+  - if @owner.errors.any?
+    .card.mx-4 
+      .card-body 
+        %div{style: 'color: red'}
+          %h2
+            = t('activerecord.modules.owner.the') +" "+ t('activerecord.modules.owner.one') +" "+ t('application.can_not_be_saved')
+          %ul
+            - @owner.errors.each do |error|
+              %li= error.full_message
+
+  .form-group.mx-4 
+    = f.label :first_name, class: "form-label required"
+    .div.w-25 
+      = f.text_field :first_name, autofocus: true, class: "form-control"
+
+  .form-group.mx-4 
+    = f.label :last_name, class: "form-label required"
+    .div.w-25 
+      = f.text_field :last_name, autofocus: true, class: "form-control"
+
+  .form-group.mx-4 
+    = f.label :email, class: "form-label required"
+    .div.w-25 
+      = f.text_field :email, autofocus: true, class: "form-control"
+
+  .form-group.mx-4 
+    = f.label :identification_numer, class: "form-label required"
+    .div.w-25 
+      = f.number_field :identification_numer, autofocus: true, class: "form-control"
+
+  .form-group.mx-4 
+    = f.label :level_type, class: "form-label required"
+    .div.w-25 
+      = f.select(:level_type, options_for_select(Owner.level_types.map {|k, v|[t("activerecord.attributes.owner.level_Types.#{k}"),k]}, @owner.level_type), {prompt: t('application.select')}, class: "form-control")
+      
+  .row.mt-4
+    .offset-3.col-3 
+      = link_to t('application.back_to',model:t('activerecord.modules.owner.other')), owners_path, class: "btn btn-secondary btn-block"
+    .col-3 
+      = button_tag t('application.save'), class: "btn btn-outline-success btn-block"
