@@ -5,7 +5,8 @@ RSpec.describe Owner, type: :model do
     described_class.new(first_name: "Owner 1",
                         last_name: "Owner 1",
                         email: "owner@gmail.com",
-                        id: "123456")
+                        id: "123456",
+                        level: 'bronze')
   }
 
   it "is valid with valid attributes" do
@@ -32,5 +33,8 @@ RSpec.describe Owner, type: :model do
     expect(subject).to_not be_valid
   end
 
-
+  it "is not valid without id" do
+    subject.id = nil
+    expect(subject).to_not be_valid
+  end
 end
