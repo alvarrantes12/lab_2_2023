@@ -37,7 +37,6 @@ module Api
       @pet.destroy
       render 'api/pets/show', status: :ok
     end
-    end
 
     private
       
