@@ -3,5 +3,5 @@ class Pet < ApplicationRecord
 
     validates :first_name, presence: true, length: { maximum: 10 }
     validates :breed, presence: true, length: { maximum: 10 }
-    validates :pedigree, presence: true
+    validates :pedigree, inclusion: { in: [true, false] }
 end

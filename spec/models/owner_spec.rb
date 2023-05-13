@@ -5,7 +5,7 @@ RSpec.describe Owner, type: :model do
     described_class.new(first_name: "Dueño1",
                         last_name: "Dueño1",
                         email: "david@gmail.com",
-                        owner_id: 123456,
+                        identifier: 123456,
                         level: 1)
   }
 
@@ -43,18 +43,18 @@ RSpec.describe Owner, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it "is not valid without owner_id" do
-    subject.owner_id = nil
+  it "is not valid without identifier" do
+    subject.identifier = nil
     expect(subject).to_not be_valid
   end
 
-  it "is not valid with a owner_id with less then 5 numbers" do
-    subject.owner_id = 1234
+  it "is not valid with a identifier with less then 5 numbers" do
+    subject.identifier = 1234
     expect(subject).to_not be_valid
   end
 
-  it "is not valid with a owner_id with more then 8 numbers" do
-    subject.owner_id = 123456789
+  it "is not valid with a identifier with more then 8 numbers" do
+    subject.identifier = 123456789
     expect(subject).to_not be_valid
   end
 

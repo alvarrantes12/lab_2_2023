@@ -22,7 +22,7 @@ es:
         first_name: Nombre
         last_name: Apellido
         email: Correo Electronico
-        owner_id: Identificador
+        identifier: Identificador
         types_level:
           gold: Oro
           silver: Plata
@@ -47,12 +47,20 @@ es:
             email:
               blank: vacío
               invalid: debe de ser un correo valido
-            owner_id:
+            identifier:
               blank: vacío
               taken: debe de ser diferente
               too_short: debe tener como minimo %{count} caracteres
               too_long: debe tener como máximo %{count} caracteres
             level:
+              blank: vacío
+        pet:
+          attributes:
+            breed:
+              too_long: debe tener como máximo %{count} caracteres
+            first_name:
+              too_long: debe tener como máximo %{count} caracteres
+            pedigree:
               blank: vacío
 
 

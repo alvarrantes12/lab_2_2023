@@ -4,8 +4,8 @@ RSpec.describe Pet, type: :model do
   subject {
     described_class.new(first_name: "Bruno",
                         breed: "Pastor",
-                        pedigree: true,
-                        owner: Owner.create(first_name: "David", last_name: "Hidalgo", email: "David@.com", owner_id: 15436, level: 0))
+                        pedigree: false,
+                        owner: Owner.create(first_name: "David", last_name: "Hidalgo", email: "David@.com", identifier: 15436, level: 0))
   }
 
   it "valid with valid attributes " do 

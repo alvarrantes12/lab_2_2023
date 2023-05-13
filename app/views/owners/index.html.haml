@@ -12,7 +12,7 @@
       %th= t('activerecord.attributes.owner.first_name')
       %th= t('activerecord.attributes.owner.last_name')
       %th= t('activerecord.attributes.owner.email')
-      %th= t('activerecord.attributes.owner.owner_id')
+      %th= t('activerecord.attributes.owner.identifier')
       %th= t('activerecord.attributes.owner.level')
       %th
 
@@ -21,7 +21,7 @@
         %td= owner.first_name
         %td= owner.last_name
         %td= owner.email
-        %td= owner.owner_id
+        %td= owner.identifier
         %td= t("activerecord.attributes.owner.types_level.#{owner.level}")
         %td
         %td= link_to t('application.show'), owner, class: "btn btn-info"
