@@ -1,2 +1,68 @@
 es:
-  hello: "Hello world"
+  application:
+    list_of: Lista de %{model}
+    new_model: Nuevo %{model}
+    edit_model: Editando %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    create: Crear
+    created: Creado exitosamente
+    updated: Actualizado exitosamente
+    deleted: Eliminado exitosamente
+    back: Atrás
+    select: Seleccione
+    can_not_be_saved: No se pudo guardar
+  activerecord:
+    attributes:
+      owner:
+        first_name: Nombre
+        last_name: Apellido
+        email: Correo Electrónico
+        identification: Número de identificación
+        levels:
+          one: Nivel
+          other: Niveles
+          gold: Oro
+          silver: Plata
+          bronze: Bronce
+      pet:
+        name: Nombre
+        race: Raza
+        pedigree: Pedigree
+    modules:
+      owner:
+        one: Propietario
+        other: Propietarios
+      pet:
+        one: Mascota
+        other: Mascotas
+    errors:
+      models:
+        owner:
+          attributes:
+            first_name:
+              blank: Este campo es obligatorio
+              too_long: No debe tener más de 10 letras
+            last_name:
+              blank: Este campo es obligatorio
+              too_long: No debe tener más de 15 letras
+            email:
+              blank: Este campo es obligatorio
+              invalid: No sigue el formato que debe tener el mismo
+            identification:
+              blank: Este campo es obligatorio
+              too_short: Debe tener más de 5 números
+              too_long: No debe tener más de 8 números
+              taken: Ya existe un dueño registrado con ese ID
+            level:
+              blank: Este campo es obligatorio
+        pet:
+          attributes:
+            name:
+              blank: Este campo es obligatorio
+              too_long: No debe tener más de 10 letras
+            race:
+              blank: Este campo es obligatorio
+              too_long: No debe tener más de 10 letras

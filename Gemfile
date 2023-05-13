@@ -5,15 +5,19 @@ ruby "3.2.0"
 
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 
+gem 'activerecord'
 gem 'bootstrap'
 gem "bootsnap", require: false
 gem 'font-awesome-sass', '~> 6.4.0'
 gem 'haml'
+gem 'haml-rails'
+gem 'httparty'
 gem "importmap-rails"
 gem "jbuilder"
 gem 'jquery-rails'
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
+gem "rack-cors"
 gem 'sass-rails'
 gem "sprockets-rails"
 gem "stimulus-rails"
@@ -27,6 +31,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'pry'
   gem "web-console"
 end
 
