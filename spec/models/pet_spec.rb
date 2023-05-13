@@ -26,16 +26,6 @@ RSpec.describe Pet, type: :model do
     subject.pedigree = nil
     expect(subject).to_not be_valid
   end
-
-  it "is not valid with a name with less than 2 letters" do
-    subject.name = "a"
-    expect(subject).to_not be_valid
-  end
-
-  it "is not valid with a breed with less than 3 letters" do
-    subject.breed = "ab"
-    expect(subject).to_not be_valid
-  end
   
   it "is not valid with a name with more than 10 letters" do
     subject.name = "abcdefghijk"

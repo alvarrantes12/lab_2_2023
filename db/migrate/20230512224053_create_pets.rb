@@ -4,7 +4,7 @@ class CreatePets < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :breed
       t.boolean :pedigree
-      t.belongs_to :director
+      t.belongs_to :owner
 
       t.timestamps
     end
