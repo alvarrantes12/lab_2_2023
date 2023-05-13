@@ -1,6 +1,5 @@
 require 'rails_helper'
-
-RSpec.describe Owner, type: :model do
+  RSpec.describe Owner, type: :model do
   subject {
     described_class.new(first_name: "pepe",
                         last_name: "Perez",
