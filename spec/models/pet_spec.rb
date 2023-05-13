@@ -4,8 +4,10 @@ RSpec.describe Pet, type: :model do
   subject {
     described_class.new(name: "Pet Name",
                         breed: "Pet Breed",
-                        pedigree: "Pet Pedigree")
+                        pedigree: true,
+                        owner: Owner.new)
   }
+
 
   it "is valid with valid attributes" do
     expect(subject).to be_valid
