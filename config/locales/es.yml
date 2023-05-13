@@ -34,22 +34,24 @@ es:
         owner:
           attributes:
             first_name:
-              blank: Vacío
-              too_short: Muy corto
+              blank: vacío
+              too_short: muy corto
             last_name:
-              blank: Vacío
-              too_short: Muy corto
+              blank: vacío
+              too_short: muy corto
             email:
-              blank: Vacío
+              blank: vacío
+              invalid: inválido
             number_id:
-              blank: Vacío
-              too_short: Muy corto
+              blank: vacío
+              too_short: muy corto
+              too_long: muy largo
+              taken: en uso
             level:
-              blank: Vacío
+              blank: vacío
     success:
       owner:
         create: El dueño ha sido creado correctamente
         update: El dueño ha sido actualizado correctamente
         delete: El dueño ha sido eliminado correctamente
-      pet:
 
