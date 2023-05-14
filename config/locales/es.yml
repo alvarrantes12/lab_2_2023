@@ -13,7 +13,8 @@ es:
     created: Creado exitosamente 
     update: Actualizado exitosamente
     destroy: Eliminado exitosamente
-    cannot_be_saved: No se puede crear el %{model}
+    cannot_be_saved: Error al crear el propietario
+    cannot_be_update: Error al editar el propietario
     prohibited_create: prohiben la creación de un nuevo %{model}
     cruds_model: CRUDs API
   activerecord:
@@ -28,6 +29,10 @@ es:
        silver: Plata
        bronze: Bronce
       level: Nivel
+     pet:
+      first_name: Nombre
+      breed: Raza
+      Pedigree: Pedigree
 
     modules:
      owner:
@@ -47,9 +52,18 @@ es:
              blank: espacio requerido
              too_long: debe tener como maximo 8 caracteres
              too_short: debe tener como minimo 5 caracteres
-             uniquessqq: este identificador ya esta registrado, digite uno diferente
+             taken: ya esta registrado, digite uno diferente
             email:
              invalid: el correo electrónico digitado es invalido
              blank: espacio requerido
             level:
              blank: espacio requerido
+        pet:
+         first_name:
+              blank: espacio requerido
+              too_long: debe tener como maximo 10 caracteres
+          breed:
+            blank: espacio requerido
+            too_long: debe tener como maximo 10 caracteres
+          pedigree:
+            blank: espacio requerido

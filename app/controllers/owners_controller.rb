@@ -17,7 +17,8 @@ class OwnersController < ApplicationController
   def create
     @owner = Owner.new(owner_params)
     if @owner.save
-      redirect_to owner_url(@owner), notice: "Owner was successfully created."
+      QuestionsService.new.build_question
+      redirect_to owner_url(@owner), notice: t('application.created')
         
     else
       render :new, status: :unprocessable_entity 
@@ -26,7 +27,7 @@ class OwnersController < ApplicationController
 
   def update
     if @owner.update(owner_params)
-      redirect_to owner_url(@owner), notice: "Owner was successfully updated." 
+      redirect_to owner_url(@owner), notice: t('application.update') 
     else
       render :edit, status: :unprocessable_entity 
     end
@@ -34,7 +35,8 @@ class OwnersController < ApplicationController
 
   def destroy
     @owner.destroy
-      redirect_to owners_url, notice: "Owner was successfully destroyed." 
+      redirect_to owners_url, notice: t('application.destroy') 
+
   end
 
   private

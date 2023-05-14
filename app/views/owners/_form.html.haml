@@ -1,41 +1,46 @@
-= form_for @owner, validate: true do |f|
-  -if @owner.errors.any?
-    .card.mx-4
-      .card-body
-        %div{style: 'color: red'}
-          %h2
-            = t('application.can_not_be_saved')
-          %ul
-            -  @owner.errors.each do |error|
-              %li= error.full_message
+= form_for @owner do |f|
+  - if @owner.errors.any?
+    #error_explanation
+      %h2= t('application.cannot_be_saved')
+      %ul
+        - @owner.errors.full_messages.each do |message|
+          %li= message
+
+  .div.m-4 
+  .page.header
+    %h1.mx-4
+      =t('application.new_model', model: t('activerecord.modules.owner.one'))
 
   .form-group.mx-4
-  = f.label :first_name, class: "form-label required"
-  .div.w-25
-    = f.text_field :first_name, autofocus: true, class: "form-control"
+    = f.label :first_name, class: "form-label required"
+    .div.w-25
+      =f.text_field :first_name, autofocus: true, class: "form-control"
 
   .form-group.mx-4
-  = f.label :last_name, class: "form-label required"
-  .div.w-25
-    = f.text_field :last_name, autofocus: true, class: "form-control"
+    = f.label :last_name, class: "form-label required"
+    .div.w-25
+      =f.text_field :last_name, autofocus: true, class: "form-control"
 
   .form-group.mx-4
-  = f.label :email, class: "form-label required"
-  .div.w-25
-    = f.string :email, autofocus: true, class: "form-control"
+    = f.label :email, class: "form-label required"
+    .dev.w-25
+      = f.text_field :email, autofocus: true, class: "form-control"
 
   .form-group.mx-4
-  = f.label :identification, class: "form-label required"
-  .div.w-25
-    = f.number_field  :identification, autofocus: true, class: "form-control"
-
+    = f.label :identification, class: "form-label required"
+    .dev.w-25
+      = f.number_field :identification, autofocus: true, class: "form-control"
+  
   .form-group.mx-4
-  = f.label :level, class: "form-label required"
-  .div.w-25
-    = f.select :level, autofocus: true, class: "form-control"
-
+    = f.label :level, class: "form-label required"
+    .dev.w-25
+      = f.select(:level, options_for_select(level, @owner.level), {prompt: t('application.select')}, class: "form-control") 
+  
   .row.mt-4
     .offset-3.col-3
       = link_to t('application.back'), owners_path, class: "btn btn-secondary btn-block"
     .col-3
-      = button_tag t('application.save'), class: "btn btn-outline-success btn-block"
+      = button_tag t('application.save'), class: "btn btn-outline-secondary btn-block"
+
+
+
