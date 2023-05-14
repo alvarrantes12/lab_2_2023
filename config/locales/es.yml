@@ -1,2 +1,55 @@
 es:
-  hello: "Hello world"
+  application:
+    list_of: Lista %{model}
+    new_model: Nuevo %{model}
+    edit_model: Editar %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    select: Seleccionar
+    create: Crear
+    back: Atrás
+    created: Creado exitosamente 
+    update: Actualizado exitosamente
+    destroy: Eliminado exitosamente
+    cannot_be_saved: No se puede crear el %{model}
+    prohibited_create: prohiben la creación de un nuevo %{model}
+    cruds_model: CRUDs API
+  activerecord:
+    attributes:
+     owner:
+      first_name: Nombre
+      last_name: Apellido
+      email: Correo electrónico
+      identification: Identificación
+      types_level:
+       gold: Oro
+       silver: Plata
+       bronze: Bronce
+      level: Nivel
+
+    modules:
+     owner:
+      one: Propietario
+      other: Propietarios
+    errors:
+      models:
+        owner:
+          attributes:
+            first_name:
+              blank: espacio requerido
+              too_long: debe tener como maximo 10 caracteres
+            last_name:
+              blank: espacio requerido
+              too_long: debe tener como maximo 15 caracteres
+            identification:
+             blank: espacio requerido
+             too_long: debe tener como maximo 8 caracteres
+             too_short: debe tener como minimo 5 caracteres
+             uniquessqq: este identificador ya esta registrado, digite uno diferente
+            email:
+             invalid: el correo electrónico digitado es invalido
+             blank: espacio requerido
+            level:
+             blank: espacio requerido
