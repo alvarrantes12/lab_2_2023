@@ -3,8 +3,8 @@ class CreateOwners < ActiveRecord::Migration[7.0]
     create_table :owners do |t|
       t.string :first_name
       t.string :last_name
-      t.string :mail
-      t.integer :owner_id
+      t.string :email
+      t.integer :identification
       t.integer :level
 
       t.timestamps

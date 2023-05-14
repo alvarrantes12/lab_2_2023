@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_11_200043) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_14_033854) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "owners", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "mail"
-    t.integer "owner_id"
+    t.string "email"
+    t.integer "identification"
     t.integer "level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -28,10 +28,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_11_200043) do
     t.string "name"
     t.string "breed"
     t.boolean "pedigree"
-    t.bigint "Owner_id"
+    t.bigint "owner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Owner_id"], name: "index_pets_on_Owner_id"
+    t.index ["owner_id"], name: "index_pets_on_owner_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "category"
+    t.string "question"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -2,37 +2,36 @@ es:
   application:
     list_of: Lista de %{model}
     new_model: Nuevo %{model}
-    title: Lab 2 David y Fabricio
     btnTitle: Ver dueños
     show: Mostrar
     edit: Editar
     save: Guardar
     back: Atras
     delete: Eliminar
-    create: Crear
-    cruds_available: tema disponible
-    error: Error !!
-    created: Creado Exitosamente
-    edited: Actualizado Exitosamente
-    destroyed: Borrado Exitosamente
+    create: Crear 
+    edited: Actualizado correctamente
+    destroyed: Borrado correctamente
     select: Seleccione
+    error: Error
+    created: Creado correctamente
+    cruds_available: Temas disponibles
     can_not_be_saved: No se pudo guardar
   activerecord:
     attributes:
       owner:
         first_name: Nombre
         last_name: Apellido
-        mail: Correo Electronico
-        owner_id: Identificador
+        email: Correo Electronico
+        identification: Identificador
         level: Nivel
         types_level:
-          0: Oro
-          1: Plata
-          2: Bronce  
+          gold: Oro
+          silver: Plata
+          bronze: Bronce  
     modules:
       owner:
         new: Nuevo Dueño
-        edit: Editando Dueño
+        edit: Editando dueño
         one: Dueño
         other: Dueños
     errors:
@@ -41,18 +40,18 @@ es:
           attributes:
             first_name:
               blank: vacío
-              too_long: debe tener como máximo %{count} caracteres
+              too_long: El nombre debe tener como máximo %{count} caracteres
             last_name: 
               blank: vacío
-              too_long: debe tener como máximo %{count} caracteres
-            mail:
+              too_long: El nombre cuenta con un máximo de %{count} caracteres
+            email:
               blank: vacío
-              invalid: debe de ser un correo valido
-            owner_id:
+              invalid: El correo no es valido
+            identification:
               blank: vacío
-              taken: debe de ser diferente
-              too_short: debe tener como minimo %{count} caracteres
-              too_long: debe tener como máximo %{count} caracteres
+              taken: El nombre ya esta utilizado
+              too_short: El minimo de caracteres es %{count} 
+              too_long: El maximo de caracteres es %{count} 
             level:
               blank: vacío
 
