@@ -41,6 +41,17 @@ es:
 
     errors:
       models:
+        pet:
+          attributes:
+            owner:
+              required: es requerido y debe ser valido
+            name:
+              blank: es requerido
+            breed:
+              blank: es requerido
+            pedigree:
+              inclusion: debe incluirse
+
         owner:
           attributes:
             first_name:

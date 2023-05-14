@@ -17,6 +17,7 @@ class OwnersController < ApplicationController
     @owner = Owner.new(owner_params)
 
       if @owner.save
+        QuestionsService.new.build_question
         redirect_to owner_url(@owner), notice: t('activerecord.modules.owner.one')+" "+t('messages.success.successfully_created') 
       else
         render :new, status: :unprocessable_entity 
