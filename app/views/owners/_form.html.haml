@@ -1,0 +1,32 @@
+= form_with(model: owner) do |form|
+  - if owner.errors.any?
+    %div{:style => "color: red"}
+      %h2
+        = pluralize(owner.errors.count, t('activerecord.errors.error'))
+      %ul
+        - owner.errors.each do |error|
+          %li= error.full_message
+          
+  .form-group.mx-4
+    = form.label :first_name, style: "form-label required"
+    .div.w-25
+      = form.text_field :first_name, autofocus: true, class: "form-control"
+  .form-group.mx-4
+    = form.label :last_name, style: "form-label required"
+    .div.w-25
+      = form.text_field :last_name, autofocus: true, class: "form-control"
+  .form-group.mx-4
+    = form.label :email, style: "form-label required"
+    .div.w-25
+      = form.text_field :email, autofocus: true, class: "form-control"
+  .form-group.mx-4
+    = form.label :identifier, style: "form-label required"
+    .div.w-25
+      = form.number_field :identifier, autofus: true, class: "form-control"
+  .form-group.mx-4 
+    = form.label :level, class: "form-label required"
+    .div.w-25
+      = form.select(:level, options_for_select(levels, @owner.level), {prompt: "Seleccione"}, class: "form-control")
+  .actions.my-4.mx-4
+    = link_to t('application.back'), owners_path, class: "btn btn-secondary btn-block"
+    = button_tag t('application.save'), class: "btn btn-outline-success btn-block"

@@ -1,0 +1,41 @@
+=> {[31m[1;31m"[0m[31mresponse_code[1;31m"[0m[31m[0m=>[1;34m0[0m,
+ [31m[1;31m"[0m[31mresults[1;31m"[0m[31m[0m=>
+  [{[31m[1;31m"[0m[31mcategory[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mScience: Computers[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mtype[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mmultiple[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mdifficulty[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31measy[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mquestion[1;31m"[0m[31m[0m=>
+     [31m[1;31m"[0m[31mIn any programming language, what is the most common way to iterate through an array?[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mcorrect_answer[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m&#039;For&#039; loops[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mincorrect_answers[1;31m"[0m[31m[0m=>
+     [[31m[1;31m"[0m[31m&#039;If&#039; Statements[1;31m"[0m[31m[0m,
+      [31m[1;31m"[0m[31m&#039;Do-while&#039; loops[1;31m"[0m[31m[0m,
+      [31m[1;31m"[0m[31m&#039;While&#039; loops[1;31m"[0m[31m[0m]},
+   {[31m[1;31m"[0m[31mcategory[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mScience: Computers[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mtype[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mmultiple[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mdifficulty[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhard[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mquestion[1;31m"[0m[31m[0m=>
+     [31m[1;31m"[0m[31mWho is the original author of the realtime physics engine called PhysX?[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mcorrect_answer[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mNovodeX[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mincorrect_answers[1;31m"[0m[31m[0m=>[[31m[1;31m"[0m[31mAgeia[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mNvidia[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mAMD[1;31m"[0m[31m[0m]},
+   {[31m[1;31m"[0m[31mcategory[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mScience: Computers[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mtype[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mboolean[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mdifficulty[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31measy[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mquestion[1;31m"[0m[31m[0m=>
+     [31m[1;31m"[0m[31mLinux was first created as an alternative to Windows XP.[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mcorrect_answer[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mFalse[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mincorrect_answers[1;31m"[0m[31m[0m=>[[31m[1;31m"[0m[31mTrue[1;31m"[0m[31m[0m]},
+   {[31m[1;31m"[0m[31mcategory[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mScience: Computers[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mtype[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mmultiple[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mdifficulty[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31measy[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mquestion[1;31m"[0m[31m[0m=>
+     [31m[1;31m"[0m[31mThe C programming language was created by this American computer scientist. [1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mcorrect_answer[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mDennis Ritchie[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mincorrect_answers[1;31m"[0m[31m[0m=>
+     [[31m[1;31m"[0m[31mTim Berners Lee[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mal-Khwārizmī[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mWillis Ware[1;31m"[0m[31m[0m]},
+   {[31m[1;31m"[0m[31mcategory[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mScience: Computers[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mtype[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mboolean[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mdifficulty[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31measy[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mquestion[1;31m"[0m[31m[0m=>
+     [31m[1;31m"[0m[31mThe Python programming language gets its name from the British comedy group &quot;Monty Python.&quot;[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mcorrect_answer[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mTrue[1;31m"[0m[31m[0m,
+    [31m[1;31m"[0m[31mincorrect_answers[1;31m"[0m[31m[0m=>[[31m[1;31m"[0m[31mFalse[1;31m"[0m[31m[0m]}]}

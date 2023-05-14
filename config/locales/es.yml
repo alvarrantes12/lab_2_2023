@@ -1,2 +1,65 @@
 es:
-  hello: "Hello world"
+  application:
+    list_of: Lista de %{model}
+    new_model: Nuevo %{model}
+    edit_model: Editar %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    create: Crear
+    can_not_be_saved: El dueño no puede ser guardado
+    back: Atras
+    created: Creado exitosamente 
+    updated: Actualizado exitosamente
+    destroyed: Eliminado exitosamente 
+  activerecord:
+    attributes:
+      owner:
+        first_name: Nombre
+        last_name: Apellido
+        email: Correo Electrónico
+        identifier: Número de identificación
+        level: Nivel
+    modules:
+      owner:
+        one: Dueño
+        other: Dueños
+
+    errors:
+      models:
+        owner:
+          attributes: 
+            first_name:
+              blank: El campo es requerido
+              too_long: debe tener menos de 10 letras
+            last_name:
+              blank: El campo es requerido
+              too_long: debe tener menos de 15 letras
+            email:
+              invalid: El correo es invalido
+              blank: El campo es requerido
+              too_short: Muy corto
+              too_long: Muy largo
+            identifier:
+              blank: El campo es requerido
+              too_short: debe tener más de 5 letras
+              too_long: debe tener menos de 8 letras
+            level:
+              blank: El campo es requerido
+              too_short: Muy corto
+              too_long: Muy largo
+        pet:
+          attributes: 
+            name: 
+              invalid: El nombre es invalido
+              blank: El campo es requerido
+              too_long: Debe tener menos de 10 letras
+            breed: 
+              invalid: La raza es invalida
+              blank: El campo es requerido
+              too_long: Debe tener menos de 10 letras
+            pedigree: 
+              invalid: El dato es invalido
+              blank: El campo es requerido
+      error: Errores encontrados
