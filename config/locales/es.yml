@@ -59,11 +59,12 @@ es:
             level:
              blank: espacio requerido
         pet:
-         first_name:
+          attributes:
+            first_name:
               blank: espacio requerido
               too_long: debe tener como maximo 10 caracteres
-          breed:
-            blank: espacio requerido
-            too_long: debe tener como maximo 10 caracteres
-          pedigree:
-            blank: espacio requerido
+            breed:
+              blank: espacio requerido
+              too_long: debe tener como maximo 10 caracteres
+            pedigree:
+              blank: espacio requerido
