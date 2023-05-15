@@ -4,34 +4,34 @@
       .card-body
         %div{style: 'color: red'}
           %h2
-            = t('application.error')
+            = t('application.can_not_be_saved')
           %ul
-            -  @owner.errors.each do |error|
-              %li= error.full_message
+            - @owner.errors.full_messages.each do |message|
+              %li= message
 
   .form-group.mx-4
     = f.label :first_name, class: "form-label required"
-    .dev.w-25
+    .div.w-25
       = f.text_field :first_name, autofocus: true, class: "form-control"
 
   .form-group.mx-4
     = f.label :last_name, class: "form-label required"
-    .dev.w-25
-      = f.text_area :last_name, autofocus: true, class: "form-control"
+    .div.w-25
+      = f.text_field :last_name, autofocus: true, class: "form-control"
 
   .form-group.mx-4
     = f.label :email, class: "form-label required"
-    .dev.w-25
-      = f.text_area :email, autofocus: true, class: "form-control"
+    .div.w-25
+      = f.text_field :email, autofocus: true, class: "form-control"
 
   .form-group.mx-4
     = f.label :identification, class: "form-label required"
-    .dev.w-25
-      = f.text_area :identification, autofocus: true, class: "form-control"
-  
+    .div.w-25
+      = f.text_field :identification, autofocus: true, class: "form-control"
+
   .form-group.mx-4
     = f.label :level, class: "form-label required"
-    .dev.w-25
+    .div.w-25
       = f.select(:level, options_for_select(t("activerecord.attributes.owner.types_level").invert, @owner.level), {prompt: t('application.select')}, class: "form-control")
 
   .row.mt-4

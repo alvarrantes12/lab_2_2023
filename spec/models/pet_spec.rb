@@ -18,7 +18,7 @@ RSpec.describe Pet, type: :model do
   end
 
   it "is not valid with a name with more then 10 letters" do
-    subject.name = "sdfhsdhfsdhsd"
+    subject.name = "aaaaaaaaaaa"
     expect(subject).to_not be_valid
   end
 
@@ -28,7 +28,7 @@ RSpec.describe Pet, type: :model do
   end
 
   it "is not valid with a breed with more then 10 letters" do
-    subject.breed = "gfjdfgjdfjfdgxvasd"
+    subject.breed = "aaaaaaaaaaa"
     expect(subject).to_not be_valid
   end
 

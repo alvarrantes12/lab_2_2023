@@ -4,7 +4,7 @@ RSpec.describe Owner, type: :model do
   subject {
     described_class.new(first_name: "Joshue",
                         last_name: "Mora",
-                        email: "joshue@gmail.com",
+                        email: "joshuem@gmail.com",
                         identification: 817263,
                         level: 2)
   }
@@ -19,7 +19,7 @@ RSpec.describe Owner, type: :model do
   end
 
   it "is not valid with a first_name with more then 10 letters" do
-    subject.first_name = "ddsfhdsfhsxcsdf"
+    subject.first_name = "aaaaaaaaaaa"
     expect(subject).to_not be_valid
   end
 
@@ -29,7 +29,7 @@ RSpec.describe Owner, type: :model do
   end
 
   it "is not valid with a last_name with more then 15 letters" do
-    subject.last_name = "dsfhdfhsa5rhsedhf"
+    subject.last_name = "aaaaaaaaaaaaaaaa"
     expect(subject).to_not be_valid
   end
 
