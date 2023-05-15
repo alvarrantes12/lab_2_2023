@@ -1,2 +1,40 @@
 es:
-  hello: "Hello world"
+  application:
+              created: Creado
+              update: Actualizado
+              destroy: Eliminado
+              edit: Editar
+              back: Atras
+              can_not_be_saved: No se pudo guardar
+              delete: Eliminar
+              create: Crear
+              show: Mostrar
+              save: Guardar
+              owners_list: Lista de Propietarios
+              list_of: Lista de
+              show: Mostrar
+              confirm: Confirmar
+              ok: Esta bien
+              cancel: Cancelar
+              
+              
+  activerecord:
+      attributes:
+          owner:
+              name: Nombre
+              last_name: Apellido
+              email: Correo
+              identifier: Identificacion
+              level: Nivel
+              New Owner: Nuevo Propietario
+              levels:
+                 1: Gold
+                 2: Silver
+                 3: Bronze
+      modules: 
+        owner:
+          one: Propietario
+          other: Propietarios
+  errors:
+      empty: Debe rellenar todos los campos
+

@@ -1,0 +1,27 @@
+%p#notice= notice
+
+.div.m-4
+  .card
+    .card-body
+    %h5.card-title
+      = t('activerecord.attributes.owner.name')
+    %p.card-text= @owner.name
+    %h5.card-title
+      = t('activerecord.attributes.owner.last_name')
+    %p.card-text= @owner.last_name
+    %h5.card-title
+      = t('activerecord.attributes.owner.email')
+    %p.card-text= @owner.email
+    %h5.card-title
+      = t('activerecord.attributes.owner.identifier')
+    %p.card-text= @owner.identifier
+    %h5.card-title
+      = t('activerecord.attributes.owner.level')
+    %p.card-text= @owner.level
+  
+  .row.nt-4
+    .offset-3.col-3
+      = link_to t('application.back'), owners_path, class: "btn btn-secondary"
+    .col-3
+      = link_to t('application.edit'), edit_owner_path(@owner), class: "btn btn-success"
+      
