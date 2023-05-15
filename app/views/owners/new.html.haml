@@ -1,5 +1,3 @@
-%h1 New owner
-= render "form", owner: @owner
-%br/
-%div
-  = link_to "Back to owners", owners_path
+%h1= t('activerecord.modules.owner.new')
+= render 'form'
+

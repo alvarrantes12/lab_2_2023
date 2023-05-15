@@ -1,25 +1,41 @@
-= form_with(model: owner) do |form|
-  - if owner.errors.any?
+= form_for @owner, validate: true do |f|
+  -if @owner.errors.any?
     .card.mx-4
       .card-body
         %div{style: 'color: red'}
           %h2
-            = pluralize(owner.errors.count, "error")
-            prohibited this owner from being saved:
+            = t('application.error')
           %ul
-            - owner.errors.each do |error|
+            -  @owner.errors.each do |error|
               %li= error.full_message
+
   .form-group.mx-4
-    = form.label :first_name, class: "form-label", style: "display: block"
-    = form.text_field :first_name, class: "form-control"
+    = f.label :first_name, class: "form-label required"
+    .dev.w-25
+      = f.text_field :first_name, autofocus: true, class: "form-control"
+
   .form-group.mx-4
-    = form.label :last_name, class: "form-label", style: "display: block"
-    = form.text_field :last_name, class: "form-control"
+    = f.label :last_name, class: "form-label required"
+    .dev.w-25
+      = f.text_area :last_name, autofocus: true, class: "form-control"
+
   .form-group.mx-4
-    = form.label :email, class: "form-label", style: "display: block"
-    = form.text_field :email, class: "form-control"
+    = f.label :email, class: "form-label required"
+    .dev.w-25
+      = f.text_area :email, autofocus: true, class: "form-control"
+
   .form-group.mx-4
-    = form.label :identification, class: "form-label", style: "display: block"
-    = form.number_field :identification, class: "form-control"
+    = f.label :identification, class: "form-label required"
+    .dev.w-25
+      = f.text_area :identification, autofocus: true, class: "form-control"
+  
   .form-group.mx-4
-    = form.submit class: "btn btn-primary"
+    = f.label :level, class: "form-label required"
+    .dev.w-25
+      = f.select(:level, options_for_select(t("activerecord.attributes.owner.types_level").invert, @owner.level), {prompt: t('application.select')}, class: "form-control")
+
+  .row.mt-4
+    .offset-3.col-3
+      = link_to t('application.back'), owners_path, class: "btn btn-secondary btn-block"
+    .col-3
+      = button_tag t('application.save'), class: "btn btn-outline-success btn-block"

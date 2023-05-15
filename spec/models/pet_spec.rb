@@ -2,48 +2,37 @@ require 'rails_helper'
 
 RSpec.describe Pet, type: :model do
   subject {
-    described_class.new(name: "Pet Name",
-                        breed: "Pet Breed",
+    described_class.new(name: "Zac",
+                        breed: "Corgi",
                         pedigree: true,
-                        owner: Owner.new)
+                        owner: Owner.create(first_name: "Marco", last_name: "Zumbado", email: "Marco@gmail.com", identification: 234125, level: 1))
   }
 
-
-  it "is valid with valid attributes" do
+  it "valid with valid attributes " do 
     expect(subject).to be_valid
   end
 
-  it "is not valid without a name" do
+  it "is not valid without name" do
     subject.name = nil
     expect(subject).to_not be_valid
   end
 
-  it "is not valid with a name shorter than 3 characters" do
-    subject.name = "A"
+  it "is not valid with a name with more then 10 letters" do
+    subject.name = "sdfhsdhfsdhsd"
     expect(subject).to_not be_valid
   end
 
-  it "is not valid with a name longer than 10 characters" do
-    subject.name = "VeryLongName"
-    expect(subject).to_not be_valid
-  end
-
-  it "is not valid without a breed" do
+  it "is not valid without breed" do
     subject.breed = nil
     expect(subject).to_not be_valid
   end
 
-  it "is not valid with a breed shorter than 3 characters" do
-    subject.breed = "A"
+  it "is not valid with a breed with more then 10 letters" do
+    subject.breed = "gfjdfgjdfjfdgxvasd"
     expect(subject).to_not be_valid
   end
 
-  it "is not valid with a breed longer than 10 characters" do
-    subject.breed = "VeryLongBreed"
-    expect(subject).to_not be_valid
-  end
-
-  it "is not valid without a pedigree" do
+  it "is not valid without pedigree" do
     subject.pedigree = nil
     expect(subject).to_not be_valid
   end

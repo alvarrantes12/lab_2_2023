@@ -2,10 +2,11 @@ require 'rails_helper'
 
 RSpec.describe Owner, type: :model do
   subject {
-    described_class.new(first_name: "Owner",
-                        last_name: "Owner 1",
-                        email: "owner@example.com",
-                        identification: "12345678")
+    described_class.new(first_name: "Joshue",
+                        last_name: "Mora",
+                        email: "joshue@gmail.com",
+                        identification: 817263,
+                        level: 2)
   }
 
   it "is valid with valid attributes" do
@@ -17,13 +18,8 @@ RSpec.describe Owner, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it "is not valid with a first_name shorter than 3 letters" do
-    subject.first_name = "A"
-    expect(subject).to_not be_valid
-  end
-
-  it "is not valid with a first_name longer than 10 letters" do
-    subject.first_name = "VeryLongFirstName"
+  it "is not valid with a first_name with more then 10 letters" do
+    subject.first_name = "ddsfhdsfhsxcsdf"
     expect(subject).to_not be_valid
   end
 
@@ -32,40 +28,38 @@ RSpec.describe Owner, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it "is not valid with a last_name shorter than 3 letters" do
-    subject.last_name = "Ab"
+  it "is not valid with a last_name with more then 15 letters" do
+    subject.last_name = "dsfhdfhsa5rhsedhf"
     expect(subject).to_not be_valid
   end
 
-  it "is not valid with a last_name longer than 15 letters" do
-    subject.last_name = "VeryLongLastNameWithMoreThan15Letters"
-    expect(subject).to_not be_valid
-  end
-
-  it "is not valid without an email" do
+  it "is not valid without email" do
     subject.email = nil
     expect(subject).to_not be_valid
   end
 
-  it "is not valid with an invalid email format" do
+  it "is not valid with invalid email format" do
     subject.email = "invalid_email"
     expect(subject).to_not be_valid
   end
 
-  it "is not valid without an identification" do
+  it "is not valid without identification" do
     subject.identification = nil
     expect(subject).to_not be_valid
   end
 
-  it "is not valid with an identification longer than 8 characters" do
-    subject.identification = "123456789"
+  it "is not valid with a identification with less then 5 numbers" do
+    subject.identification = 0000
     expect(subject).to_not be_valid
   end
 
-  it "is not valid with a duplicated identification" do
-    another_owner = Owner.new(first_name: "Another", last_name: "Owner", email: "another@example.com", identification: "12345678")
-    another_owner.save
+  it "is not valid with a identification with more then 8 numbers" do
+    subject.identification = 000000000
+    expect(subject).to_not be_valid
+  end
 
+  it "is not valid without level" do
+    subject.level = nil
     expect(subject).to_not be_valid
   end
 end

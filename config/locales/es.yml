@@ -2,43 +2,56 @@ es:
   application:
     list_of: Lista de %{model}
     new_model: Nuevo %{model}
-    edit_model: Editando %{model}
+    btnTitle: Ver dueños
     show: Mostrar
     edit: Editar
     save: Guardar
+    back: Atras
     delete: Eliminar
-    create: Crear
-    cruds_available: tema disponible
-    created: Creado exitosamente
-    updated: Actualizado exitosamente
-    deleted: Eliminado exitosamente
-    back: Atrás
+    create: Crear 
+    edited: Actualizado correctamente
+    destroyed: Borrado correctamente
     select: Seleccione
+    error: Error
+    created: Creado correctamente
+    owners_available: Dueños Disponibles
     can_not_be_saved: No se pudo guardar
   activerecord:
     attributes:
-      director:
+      owner:
         first_name: Nombre
         last_name: Apellido
-      pet:
-        owner: Propietario
+        email: Correo Electronico
+        identification: Identificador
+        level: Nivel
+        types_level:
+          gold: Oro
+          silver: Plata
+          bronze: Bronce
     modules:
-      director:
-        one: Director
-        other: Directores
+      owner:
+        new: Nuevo Dueño
+        edit: Editando dueño
+        one: Dueño
+        other: Dueños
 
     errors:
       models:
-        director:
+        owner:
           attributes:
             first_name:
-              blank: El campo es requerido
-              too_short: debe tener más de 3 letras
-            last_name:
-              blank: El campo es requerido
-              too_short: debe tener más de 3 letras
-              too_long: debe tener menos de 10 letras
-        pet:
-          attributes:
-            owner:
-              required: El campo es requerido
+              blank: Vacio
+              too_long: El nombre debe tener como máximo %{count} caracteres
+            last_name: 
+              blank: Vacio
+              too_long: El nombre cuenta con un máximo de %{count} caracteres
+            email:
+              blank: Vacio
+              invalid: El correo es invalido
+            identification:
+              blank: Vacio
+              taken: Ya esta en uso
+              too_short: El minimo de caracteres es %{count} 
+              too_long: El maximo de caracteres es %{count} 
+            level:
+              blank: Vacio

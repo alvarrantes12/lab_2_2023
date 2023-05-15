@@ -1,7 +1,2 @@
-%h1 Editing owner
-= render "form", owner: @owner
-%br/
-%div
-  = link_to "Show this owner", @owner
-  |
-  \#{link_to "Back to owners", owners_path}
+%h1= t('activerecord.modules.owner.edit')
+= render 'form'
