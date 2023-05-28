@@ -19,7 +19,7 @@ module Api
     @pet = Pet.new(pet_params)
     
     if @pet.save
-      render 'api/pets/show', status: :created
+      render 'api/pets/index', status: :created
     else
       render json: @pet.errors, status: :unprocessable_entity 
     end
@@ -27,7 +27,7 @@ module Api
 
   def update
     if @pet.update(pet_params)
-      render 'api/pets/show', status: :ok
+      render 'api/pets/index', status: :ok
     else
       render json: @pet.errors, status: :unprocessable_entity 
     end
@@ -36,7 +36,7 @@ module Api
   def destroy
     @pet.destroy
 
-    render 'api/pets/show', status: :ok
+    render 'api/pets/index', status: :ok
   end
 
   private
@@ -45,7 +45,7 @@ module Api
     end
 
     def pet_params
-      params.require(:pet).permit(:first_name, :breed, :pedigree, :owner_id)
+      params.require(:pet).permit(:name, :breed, :pedigree, :owner_id)
     end
   end
 end

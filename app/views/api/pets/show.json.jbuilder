@@ -1,6 +1,6 @@
 json.pet do 
     json.id @pet.id
-    json.first_name @pet.first_name
+    json.first_name @pet.name
     json.breed @pet.breed
     json.pedigree @pet.pedigree
     json.owner do
