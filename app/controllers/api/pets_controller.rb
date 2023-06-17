@@ -19,6 +19,7 @@ module Api
     @pet = Pet.new(pet_params)
     
     if @pet.save
+      @pets = Pet.all
       render 'api/pets/index', status: :created
     else
       render json: @pet.errors, status: :unprocessable_entity 
